@@ -17,7 +17,6 @@ class ConversationList extends React.Component{
     }
     render(){
         var convArr = [];
-        var len = this.state["conversations"].length;
         var i = 0;
         for(var key in this.state["conversations"]){
             var elem = this.state["conversations"][key];

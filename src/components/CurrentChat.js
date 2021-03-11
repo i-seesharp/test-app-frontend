@@ -2,7 +2,6 @@ import React from "react";
 import Message from "./Message.js";
 import ConversationList from "./ConversationList.js";
 import TextBox from "./TextBox.js";
-import Conversation from "./Conversation.js";
 import ChatMessages from "./ChatMessages.js";
 
 class CurrentChat extends React.Component{

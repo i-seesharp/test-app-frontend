@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Divider, Avatar, Grid, IconButton, Button, TextField } from "@material-ui/core";
+import { Avatar, Grid, IconButton } from "@material-ui/core";
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
@@ -9,13 +9,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 //We should read from some json file, this is for the current user
 //Also, we should use a user ID but i dont know is we made one so i just left it as is
 const currentCommenter = "Tester";
-const img_src = "../assets/logo512";
 
 class ReplyCard extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
+		const {comment} = props;
 		this.state = {
-			comment : null,
+			comment : comment,
 		};
 		this.like = this.like.bind(this);
 		this.dislike = this.dislike.bind(this);
@@ -35,8 +35,7 @@ class ReplyCard extends React.Component {
 	}
 	
 	render (){
-		const {comment} = this.props
-		this.state.comment = comment
+		
 		return (
 			<div style={{marginLeft:"10%", marginTop:"2%"}}>
 				<div>

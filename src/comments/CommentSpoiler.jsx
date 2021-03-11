@@ -8,7 +8,7 @@ class CommentSpoiler extends React.Component{
 	}
 	
 	changeColor(event){
-		if (event.target.style.backgroundColor == 'rgb(204, 204, 204)'){
+		if (event.target.style.backgroundColor === 'rgb(204, 204, 204)'){
 			event.target.style.backgroundColor = 'black'
 		} else {
 			event.target.style.backgroundColor = 'rgb(204, 204, 204)'

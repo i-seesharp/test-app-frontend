@@ -5,7 +5,7 @@ import CommentCard from "./CommentCard"
 import CommentSpoiler from "./CommentSpoiler"
 import Commenter from "./Commenter"
 import Comment from "./Comment"
-import { Paper, TextField, Button, TextareaAutosize  } from "@material-ui/core";
+import { Paper, TextField, Button,} from "@material-ui/core";
 
 //IMPORTANT
 //We should read from some json file, this is for the current user
@@ -14,11 +14,6 @@ const currentUser = "Tester";
 const img_src = "../assets/logo512";
 const comment = <span> The answer to this question is <CommentSpoiler comment={"SPOILER"}/></span>
 
-function getCurrentTime(){
-	var current = new Date();
-	let today = current.toLocaleString();
-	return today;
-}
 
 class CommentSection extends React.Component {
 	constructor(){

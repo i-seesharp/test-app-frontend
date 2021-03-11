@@ -13,10 +13,11 @@ const currentCommenter = "Tester";
 const img_src = "../assets/logo512";
 
 class CommentCard extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
+		const {comment} = props;
 		this.state = {
-			comment : null,
+			comment : comment,
 			replies : [],
 			reply: ""
 		};
@@ -51,7 +52,7 @@ class CommentCard extends React.Component {
 	}
 	
 	showReplies(event){
-		if (this.state.replies.length == 0){
+		if (this.state.replies.length === 0){
 			this.setState({replies:this.state.comment.replies})
 		} else {
 			this.setState({replies:[]})
@@ -59,8 +60,7 @@ class CommentCard extends React.Component {
 	}
 	
 	render (){
-		const {comment} = this.props
-		this.state.comment = comment
+		
 		return (
 			<div>
 				<div>

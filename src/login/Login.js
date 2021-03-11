@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../assets/mashup-logo.svg";
 import {details} from "../sample-data/sample-credentials.js";
-import {Router, Route, Redirect} from "react-router-dom";
 import Menu from "../Menu.js";
 import Profile from "../profile/Profile.js";
 

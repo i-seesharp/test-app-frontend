@@ -21,7 +21,6 @@ class TextBox extends React.Component{
         }
     }
     render(){
-        var txtBox = "txt-box";
         return(
             <div className="chat-form-container">
                         <form id="chat-form">

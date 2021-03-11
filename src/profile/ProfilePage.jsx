@@ -28,18 +28,7 @@ class ProfilePage extends React.Component{
 
     render() {
         // TODO: Make this use question object and when clicked go to that question
-        const questionList = this.props.activeUser.questions.map(question =>
-            <li key={question}>
-                    <p className={"profileTextField"}>{question}</p>
-            </li>
-        );
 
-        // TODO: Make this use some kind of project object so that users can do interaction with them
-        const projectsList = this.props.activeUser.projects.map(project =>
-            <li key={project} className={"projectsListProject"}>
-                <p className={"profileTextField"}>{project}</p>
-            </li>
-        )
 
         const posts = this.props.activeUser.posts.map(post =>
             <li key={post}>
