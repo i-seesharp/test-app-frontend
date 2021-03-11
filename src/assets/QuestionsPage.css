@@ -1,0 +1,102 @@
+#backgroundQuestions{
+    background-color: white;
+    min-height: 100vh;
+}
+
+#header{
+    background-color: black;
+}
+
+#headerText{
+    color: white;
+    margin: 0 0 0 0;
+    font-size: 50px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.back{
+    text-decoration: none;
+    margin: 20px 40px 0 0;
+    color: white;
+    float: right;
+    font-size: 20px;
+}
+
+#questionsList{
+    height: 42vh;
+    max-height: 42vh;
+    overflow-y: scroll;
+    list-style-type: none;
+}
+
+#questions{
+    margin: 5vh 5vw 5vh 5vw;
+    min-height: 75vh;
+    background-color: gray;
+}
+
+.questionLink{
+    font-size: 150%;
+    color: black;
+}
+
+.titleSection{
+    background-color: black;
+}
+
+.title{
+    color: white;
+    font-size: 3vh;
+    margin: 1vh 0 0 2vw;
+}
+
+.content{
+    font-size: 150%;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+#questionsPane{
+    margin: 0 10% 0 10%;
+    background-color: white;
+    height: 50vh;
+}
+
+#questionQuery{
+    margin: 10px 0 0 5vw;
+}
+
+.query-title{
+    font-size: 4vh;
+}
+
+.query-text{
+    font-size: 4vh;
+}
+
+#addQuestion{
+    float: right;
+    margin: 2vh 5vw 0 0;
+    background-color: black;
+}
+
+.add-text{
+    font-size: 2vh;
+    color: white;
+}
+
+.questionTitle{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.questionID{
+    font-style: italic;
+    font-size: 50%;
+}
+
+.questionElement{
+    margin: 10px 0 0 0;
+}

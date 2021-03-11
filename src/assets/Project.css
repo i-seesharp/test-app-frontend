@@ -1,0 +1,46 @@
+.project-card{
+    background-color: black;
+    color: white;
+    overflow-wrap: break-word;
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 20px;
+}
+.top-project-container {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+.project-container {
+    grid-column-start: 2;
+}
+.selected-file{
+    grid-column-start: 2;
+    width: 1000px;
+    height: 500px;
+}
+.project-card-selected{
+    background-color: white;
+    color: black;
+    overflow-wrap: break-word;
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 20px;
+}
+.project-card-name{
+    padding: 10px;
+    text-align: left;
+    display: inline-block;
+}
+.project-card-desc{
+    overflow-wrap: break-word;
+    text-align: left;
+    padding: 10px;
+}
+.project-card-lang{
+    overflow-wrap: break-word;
+    text-align: left;
+    display: inline-block;
+    padding: 10px;
+}

@@ -1,0 +1,59 @@
+#headerQuestion{
+    background-color: black;
+    text-align: center;
+}
+
+#backgroundQuestion{
+    background-color: white;
+    min-height: 0;
+}
+
+#headerText{
+    margin: 0 0 0 0;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.q-container {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+.questions-v1 {
+    grid-column-start: 2;
+}
+
+.questions-v2 {
+    grid-column-start: 2;
+}
+
+.link{
+    text-decoration: none;
+}
+
+#questionBody{
+    background-color: gray;
+}
+
+.titleSection{
+    background-color: black;
+}
+
+.title{
+    color: white;
+    font-size: 3vh;
+    margin: 1vh 0 0 2vw;
+}
+
+.content{
+    font-size: 150%;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+#questionDescription{
+    margin: 20px 10vh 0 10vh;
+    background-color: gray;
+    height: 30vh;
+    max-height: 30vh;
+    overflow-y: scroll;
+}

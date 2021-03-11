@@ -1,0 +1,64 @@
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(25, 1fr);
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .nav-profile {
+      grid-row-start: 8;
+  }
+  .nav-messages {
+      grid-row-start: 9;
+  }
+  .nav-problems {
+      grid-row-start: 10;
+  }
+  .nav-stats {
+      grid-row-start: 11;
+  }
+  .img-wrapper {
+      display: inline-block;
+      text-align: center;
+  }
+  .nav-logo {
+      background-color: white;
+      border-radius: 10%;
+      margin: 20px;
+      grid-row: 1/ 6;
+      background-image: url("./mashup-logo.svg");
+  }
+  .nav-solve {
+      grid-row-start: 12;
+  }
+
+  .nav-projects {
+      grid-row-start: 13;
+  }
+
+  .nav-logout {
+      grid-row-start: 20;
+  }
+  

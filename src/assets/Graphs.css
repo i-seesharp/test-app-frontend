@@ -1,0 +1,12 @@
+.donut-graph {
+    display: inline-block;
+    width : 500px;
+    height: 500px;
+}
+
+.line-graph {
+    margin-left: 30px;
+    display: inline-block;
+    width: 600px;
+    height: 500px;
+}

@@ -1,0 +1,123 @@
+.leaderboard {
+    grid-column: 1 / 40;
+    grid-row: 1 / 5;
+    color: white;
+    background-color: black;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    padding: 20px;
+}
+
+.friend-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.friend-rating {
+    margin: 10px;
+    grid-column-start: 1;
+}
+
+.friend-name {
+    margin: 10px;
+    grid-column-start: 2;
+}
+
+.friend-solved {
+    margin: 10px;
+    grid-column-start: 3;
+}
+
+.graphs {
+    margin-top: 20px;
+}
+
+.solved-container{
+    display: grid;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 10%;
+}
+
+.problems-solved {
+    grid-column-start: 42;
+    grid-column-end: -1;
+}
+
+.problem-card {
+    background-color: white;
+    margin: 20px;
+    color: black;
+    border-radius: 10%;
+}
+
+.problem-name {
+    margin: 10px;
+}
+
+.problem-difficulty{
+    font-size: 70%;
+    margin: 10px;
+}
+
+.problem-desc{
+    margin: 15px;
+}
+
+.notes-container {
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border-radius: 5%;
+    
+}
+
+.notes {
+    grid-column-start: 25;
+    grid-column-end: 75;
+    grid-row-start: 6;
+    grid-row-end: auto;
+}
+
+
+.create-note form {
+    margin: 15px;
+}
+
+.note-container {
+    padding: 10px;
+    margin: 25px;
+    background-color: white;
+    color: black;
+    border-radius: 10%;
+}
+
+.note-delete{
+    float:right;
+}
+
+.top-stats{
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+.note-text {
+    margin: 10px;
+}
+.view-counter {
+    margin : 20px;
+    grid-column: 40/60;
+    grid-row: 5;
+}
+.stats-container {
+    grid-column-start: 2;
+}
+
+.numbers-container {
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+    grid-template-rows: repeat(10, 100px);
+}
