@@ -4,6 +4,8 @@ import {details} from "../sample-data/sample-credentials.js";
 import Menu from "../Menu.js";
 import Profile from "../profile/Profile.js";
 
+import axios from "axios";
+
 class Login extends React.Component{
     constructor(props){
         super(props);
@@ -13,7 +15,7 @@ class Login extends React.Component{
             var currText = e.target.value;
             this.setState({[name]: currText});
         }
-        this.handleSubmit = (e) => {
+        this.handleSubmit = async (e) => {
             e.preventDefault();
             console.log("Username : "+this.state.username);
             console.log("Password : "+this.state.password);
@@ -21,6 +23,7 @@ class Login extends React.Component{
                 username: this.state.username,
                 password: this.state.password 
             };
+            var res = await axios.post("http://localhost:5000/login", obj);
             var found = false;
             for(var i=0;i<details.length;i++){
                 if(details[i].username === obj.username && details[i].password === obj.password){

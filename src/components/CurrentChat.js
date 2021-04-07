@@ -4,13 +4,18 @@ import ConversationList from "./ConversationList.js";
 import TextBox from "./TextBox.js";
 import ChatMessages from "./ChatMessages.js";
 
+import io from "socket.io-client";
+
+const serverURI = "http://localhost:5000/";
+
+const myName = Math.random().toString();
+
 class CurrentChat extends React.Component{
     constructor(props){
         super(props);
         this.state = {"msgs": props.msg,
         "conversations": props.conversations,
        "name": props.name};
-
         this.addMessage = (msg) => {
             this.setState((state, props) => {
                 state["msgs"][state.name].push(msg);
@@ -22,6 +27,13 @@ class CurrentChat extends React.Component{
             console.log(nm);
             this.setState({"name": nm});
         }
+        this.socket = io(serverURI,{
+            withCredentials: true,
+            extraHeaders: {
+                "my-custom-header": "sample"
+            }
+        });
+        this.socket.emit("id", {name: myName});
     }
     render(){
         //Props contains a series of Message Components
@@ -52,11 +64,22 @@ class CurrentChat extends React.Component{
                         </div>
                         <ChatMessages msgComponents={msgComponents} />           
                     </main>
-                    <TextBox update={this.addMessage} />
+                    <TextBox update={this.addMessage} socket={this.socket} />
                     </div>
             </React.Fragment>
             
         );
+
+    }
+
+    componentDidMount(){
+        this.socket.on("new-message", (msg)=>{
+            this.setState((state, props) => {
+                state["msgs"][state.name].push(msg);
+                return {"msgs": state["msgs"]};
+            });
+            this.props.changeLastMsg(this.state.name, msg);
+        });
     }
 }
 export default CurrentChat;

@@ -4,7 +4,7 @@ class TextBox extends React.Component{
     constructor(props){
         super(props);
         this.state = {msg: ""};
-
+        this.socket = props.socket;
         this.stateChange = (e) => {
             var newState = e.target.value;
             this.setState({msg: newState});
@@ -16,6 +16,7 @@ class TextBox extends React.Component{
                 who: "me",
                 content: this.state.msg
             }
+            this.socket.emit("message", formattedMsg);
             this.setState({msg: ""});
             this.props.update(formattedMsg);
         }

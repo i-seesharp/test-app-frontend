@@ -45,7 +45,7 @@ class CodeEditor extends React.Component {
 						<MenuItem value={"c_cpp"}>C/C++</MenuItem>
 						<MenuItem value={"javascript"}>JavaScript</MenuItem>
 					</Select>
-					<button className="Button" onCLick={this.run}>Run</button>
+					<button className="Button" onClick={this.run}>Run</button>
 				</div>
 				<div className="inputOutput">
 					<AceEditor 
